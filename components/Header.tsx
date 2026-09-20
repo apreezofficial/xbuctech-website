@@ -20,17 +20,13 @@ export function Header() {
         <a
           href="/"
           aria-label="X-BUC Tech home"
-          className="flex items-center gap-2 text-white"
+          className="flex items-center gap-3 text-white"
         >
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600">
-            <span className="h-2 w-2 rounded-full bg-white" />
-          </span>
-          <span className="text-base font-semibold tracking-tight">
-            X-BUC{" "}
-            <span className="text-xs font-medium tracking-widest text-indigo-400">
-              TECH
-            </span>
-          </span>
+          <img
+            src="https://cdn.prod.website-files.com/6a7eeaf0a1bb653f6729ecbb/6a8042a1ee0d4bf4bd8931f7_image-removebg-preview-p-500.png"
+            alt="X-BUC Tech logo"
+            className="h-8 w-auto object-contain md:h-9"
+          />
         </a>
 
         {/* Desktop nav */}
