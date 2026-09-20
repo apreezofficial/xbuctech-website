@@ -53,7 +53,7 @@ export function Header() {
         <div className="hidden items-center md:flex">
           <a
             href="/contact"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+            className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
           >
             Book a call
             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -97,7 +97,7 @@ export function Header() {
           <a
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-neutral-950"
+            className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
           >
             Book a call
             <ArrowUpRight size={16} />
