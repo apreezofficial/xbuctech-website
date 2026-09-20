@@ -1,16 +1,14 @@
-import { ArrowUpRight } from "lucide-react";
-
 type ServiceLinkProps = {
   href: string;
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 };
 
-export function ServiceLink({ href, children, className = "" }: ServiceLinkProps) {
+export function ServiceLink({ href, children, className = "", style }: ServiceLinkProps) {
   return (
-    <a className={`inline-flex items-center gap-2 ${className}`} href={href}>
+    <a className={`inline-flex cursor-pointer items-center gap-2 ${className}`} href={href} style={style}>
       {children}
-      <ArrowUpRight size={17} />
     </a>
   );
 }

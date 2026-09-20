@@ -18,9 +18,9 @@ const fieldClass =
 
 const labelClass = "flex flex-col gap-2 text-sm font-medium text-neutral-300";
 
-type ContactFormProps = { selectedService?: string };
+type ContactFormProps = { selectedService?: string; focus?: string };
 
-export function ContactForm({ selectedService }: ContactFormProps) {
+export function ContactForm({ selectedService, focus }: ContactFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -62,6 +62,7 @@ export function ContactForm({ selectedService }: ContactFormProps) {
         name="_subject"
         value="New X-BUC Tech consultation request"
       />
+      {focus ? <input type="hidden" name="focus" value={focus} /> : null}
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <label className={labelClass}>

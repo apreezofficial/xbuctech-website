@@ -20,7 +20,7 @@ const serviceLabels: Record<string, string> = {
 export default async function ContactPage({
   searchParams,
 }: {
-  searchParams: Promise<{ service?: string }>;
+  searchParams: Promise<{ service?: string; focus?: string }>;
 }) {
   const params = await searchParams;
   const selectedService = params.service
@@ -50,6 +50,13 @@ export default async function ContactPage({
               untangle. We&apos;ll bring a practical point of view and a
               clear next step.
             </p>
+            {params.focus ? (
+              <p className="mt-5 max-w-md border-l border-indigo-400/60 pl-4 text-sm leading-relaxed text-indigo-200">
+                You&apos;re reaching out about <strong>{params.focus}</strong>.
+                Include any relevant context in your message and we&apos;ll shape
+                the conversation around that specific need.
+              </p>
+            ) : null}
 
             <div className="mt-10 flex flex-col gap-5 border-t border-white/10 pt-8">
               <a
@@ -116,7 +123,7 @@ export default async function ContactPage({
                 Secure inquiry
               </span>
             </div>
-            <ContactForm selectedService={selectedService} />
+            <ContactForm selectedService={selectedService} focus={params.focus} />
           </div>
         </div>
       </main>

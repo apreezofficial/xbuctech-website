@@ -1,12 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 
 const capabilities = [
-  "Vulnerability management",
-  "Data encryption & SSL/TLS",
-  "Cybersecurity awareness",
-  "Network infrastructure",
-  "Software testing & QA",
-  "Compliance & security",
+  { label: "Vulnerability management", href: "/services/cybersecurity" },
+  { label: "Data encryption & SSL/TLS", href: "/services/cybersecurity" },
+  { label: "Cybersecurity awareness", href: "/services/cybersecurity" },
+  { label: "Network infrastructure", href: "/services/cloud-infrastructure" },
+  { label: "Software testing & QA", href: "/services/software-testing" },
+  { label: "Compliance & security", href: "/services/compliance-security" },
 ];
 
 export function Capabilities() {
@@ -27,21 +27,22 @@ export function Capabilities() {
 
         <div className="divide-y divide-white/10 border-t border-white/10">
           {capabilities.map((capability, index) => (
-            <div
-              key={capability}
-              className="group flex items-center gap-4 py-5 sm:gap-6"
+            <a
+              key={capability.label}
+              href={capability.href}
+              className="group flex cursor-pointer items-center gap-4 py-5 transition-colors hover:bg-white/[0.02] sm:gap-6"
             >
               <span className="text-xs font-semibold tracking-widest text-neutral-600">
                 0{index + 1}
               </span>
               <strong className="flex-1 text-base font-medium text-white sm:text-lg">
-                {capability}
+                {capability.label}
               </strong>
               <ArrowUpRight
                 size={16}
                 className="shrink-0 text-neutral-600 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-indigo-400"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

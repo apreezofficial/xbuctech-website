@@ -42,7 +42,8 @@ export function ServiceDetail({ service }: { service: Service }) {
 
           <ServiceLink
             href={`/contact?service=${service.slug}`}
-            className="group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+            className="group mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+            style={{ backgroundColor: "var(--service-accent)" }}
           >
             Talk to an expert
             <ArrowUpRight
@@ -100,11 +101,19 @@ export function ServiceDetail({ service }: { service: Service }) {
             {service.detail}
           </p>
 
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-neutral-500">
+            Each workstream below represents a practical area where we can help
+            strengthen, manage, or validate your technology environment. Select
+            the area closest to your current priority to start a focused
+            conversation with the X-BUC Tech team.
+          </p>
+
           <div className="mt-8 divide-y divide-white/10 border-t border-white/10">
             {service.capabilities.map((capability, index) => (
-              <div
+              <a
                 key={capability}
-                className="group flex items-center gap-4 py-4"
+                href={`/contact?service=${service.slug}&focus=${encodeURIComponent(capability)}`}
+                className="group flex cursor-pointer items-center gap-4 py-4 transition-colors hover:bg-white/[0.02]"
               >
                 <span
                   className="text-xs font-semibold tabular-nums"
@@ -119,7 +128,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                   size={16}
                   className="shrink-0 text-neutral-600 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -147,7 +156,8 @@ export function ServiceDetail({ service }: { service: Service }) {
 
         <ServiceLink
           href={`/contact?service=${service.slug}`}
-          className="group mx-auto mt-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+          className="group mx-auto mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+          style={{ backgroundColor: "var(--service-accent)" }}
         >
           Schedule a consultation
           <ArrowRight
