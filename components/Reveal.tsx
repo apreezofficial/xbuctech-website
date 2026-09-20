@@ -10,7 +10,7 @@ type RevealProps = {
 };
 
 export function Reveal({ children, className = "", delay = 0, as = "div" }: RevealProps) {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
