@@ -1,7 +1,16 @@
-import { Icon } from "./Icon";
+import { ArrowUpRight } from "lucide-react";
 
-type ServiceLinkProps = { href: string; children: React.ReactNode; className?: string };
+type ServiceLinkProps = {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+};
 
 export function ServiceLink({ href, children, className = "" }: ServiceLinkProps) {
-  return <a className={`service-link ${className}`} href={href}>{children}<Icon name="arrow" size={17} /></a>;
+  return (
+    <a className={`inline-flex items-center gap-2 ${className}`} href={href}>
+      {children}
+      <ArrowUpRight size={17} />
+    </a>
+  );
 }

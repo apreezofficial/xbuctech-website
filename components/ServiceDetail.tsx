@@ -1,6 +1,161 @@
 import type { Service } from "@/lib/services";
 import { ServiceLink } from "./ServiceLink";
+import { ArrowUpRight, ArrowRight, Sparkles } from "lucide-react";
 
 export function ServiceDetail({ service }: { service: Service }) {
-  return <main className="service-detail shell" style={{ "--service-accent": service.accent } as React.CSSProperties}><div className="detail-breadcrumb"><a href="/services">Services</a><span>/</span><span>{service.shortTitle}</span></div><div className="detail-layout"><div><p className="eyebrow">{service.eyebrow}</p><h1>{service.title}</h1><p className="detail-lede">{service.description}</p><ServiceLink href={`/contact?service=${service.slug}`} className="button button-light">Talk to an expert</ServiceLink></div><div className="detail-marker"><span>XB</span><strong>BUILT<br />AROUND<br /><em>YOU.</em></strong></div></div><section className="detail-content"><div><p className="eyebrow">/ The work</p><h2>Clarity before<br /><em>complexity.</em></h2></div><div><p className="detail-copy">{service.detail}</p><div className="capability-list detail-list">{service.capabilities.map((capability, index) => <div className="capability" key={capability}><span>0{index + 1}</span><strong>{capability}</strong><span>↗</span></div>)}</div></div></section><section className="detail-cta"><p className="eyebrow">/ Ready when you are</p><h2>Make your next<br /><em>move secure.</em></h2><ServiceLink href={`/contact?service=${service.slug}`} className="button button-dark">Schedule a consultation</ServiceLink></section></main>;
+  const accentStyle = { "--service-accent": service.accent } as React.CSSProperties;
+
+  return (
+    <main className="bg-neutral-950" style={accentStyle}>
+      {/* Breadcrumb */}
+      <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
+          <a href="/services" className="transition-colors hover:text-white">
+            Services
+          </a>
+          <span className="text-neutral-700">/</span>
+          <span className="text-neutral-300">{service.shortTitle}</span>
+        </div>
+      </div>
+
+      {/* Header layout */}
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 py-16 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:px-8 lg:py-24">
+        <div>
+          <p
+            className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em]"
+            style={{ color: "var(--service-accent)" }}
+          >
+            <span
+              className="h-px w-6"
+              style={{ backgroundColor: "var(--service-accent)" }}
+            />
+            {service.eyebrow}
+          </p>
+
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
+            {service.title}
+          </h1>
+
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-neutral-400 sm:text-lg">
+            {service.description}
+          </p>
+
+          <ServiceLink
+            href={`/contact?service=${service.slug}`}
+            className="group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+          >
+            Talk to an expert
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </ServiceLink>
+        </div>
+
+        {/* Marker card */}
+        <div
+          className="relative flex aspect-square w-full max-w-xs flex-col justify-between rounded-2xl border border-white/10 p-6"
+          style={{
+            background:
+              "linear-gradient(160deg, color-mix(in srgb, var(--service-accent) 18%, transparent), transparent 60%)",
+          }}
+        >
+          <span
+            className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-neutral-950"
+            style={{ backgroundColor: "var(--service-accent)" }}
+          >
+            XB
+          </span>
+          <strong className="text-2xl font-semibold leading-tight tracking-tight text-white">
+            BUILT
+            <br />
+            AROUND
+            <br />
+            <em className="not-italic" style={{ color: "var(--service-accent)" }}>
+              YOU.
+            </em>
+          </strong>
+        </div>
+      </div>
+
+      {/* Content */}
+      <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 border-t border-white/10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.3fr] lg:px-8 lg:py-24">
+        <div>
+          <p
+            className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em]"
+            style={{ color: "var(--service-accent)" }}
+          >
+            <Sparkles size={13} />
+            The work
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            Clarity before
+            <br />
+            <em className="not-italic text-neutral-500">complexity.</em>
+          </h2>
+        </div>
+
+        <div>
+          <p className="max-w-xl text-base leading-relaxed text-neutral-400">
+            {service.detail}
+          </p>
+
+          <div className="mt-8 divide-y divide-white/10 border-t border-white/10">
+            {service.capabilities.map((capability, index) => (
+              <div
+                key={capability}
+                className="group flex items-center gap-4 py-4"
+              >
+                <span
+                  className="text-xs font-semibold tabular-nums"
+                  style={{ color: "var(--service-accent)" }}
+                >
+                  0{index + 1}
+                </span>
+                <strong className="flex-1 text-sm font-medium text-white sm:text-base">
+                  {capability}
+                </strong>
+                <ArrowUpRight
+                  size={16}
+                  className="shrink-0 text-neutral-600 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-white/10 px-4 py-20 text-center sm:px-6 lg:px-8">
+        <p
+          className="mb-4 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "var(--service-accent)" }}
+        >
+          <span
+            className="h-px w-6"
+            style={{ backgroundColor: "var(--service-accent)" }}
+          />
+          Ready when you are
+        </p>
+        <h2 className="mx-auto max-w-xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+          Make your next
+          <br />
+          <em className="not-italic" style={{ color: "var(--service-accent)" }}>
+            move secure.
+          </em>
+        </h2>
+
+        <ServiceLink
+          href={`/contact?service=${service.slug}`}
+          className="group mx-auto mt-9 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+        >
+          Schedule a consultation
+          <ArrowRight
+            size={16}
+            className="transition-transform group-hover:translate-x-0.5"
+          />
+        </ServiceLink>
+      </section>
+    </main>
+  );
 }
