@@ -1,0 +1,84 @@
+# ==========================================
+# Dependencies
+# ==========================================
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.json
+
+# ==========================================
+# Next.js Build & Cache Outputs
+# ==========================================
+/.next/
+/out/
+/build
+/dist
+
+# ==========================================
+# Production & Environment Variables
+# ==========================================
+# Never commit sensitive environment secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Commit this if you use it as an example/template:
+# !.env.example
+
+# ==========================================
+# Logs & Debugging
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+/coverage
+/.nyc_output
+/cypress/videos
+/cypress/screenshots
+/.playwright/
+/test-results/
+
+# ==========================================
+# Vercel Deployment
+# ==========================================
+/.vercel
+
+# ==========================================
+# TypeScript & Tooling Caches
+# ==========================================
+*.tsbuildinfo
+next-env.d.ts
+/.turbo
+/.eslintcache
+
+# ==========================================
+# IDEs, Editors & OS Files
+# ==========================================
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains / WebStorm
+.idea/
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
