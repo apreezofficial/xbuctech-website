@@ -27,7 +27,7 @@ export function ContactSection() {
 
           <a
             href="/contact"
-            className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+            className="site-button site-button--dark group"
           >
             Talk to an IT consultant
             <ArrowUpRight

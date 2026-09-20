@@ -66,7 +66,7 @@ export function Services() {
 
         <a
           href="/services"
-          className="group mt-10 inline-flex items-center gap-2 text-sm font-semibold text-white"
+          className="site-button site-button--dark group mt-10"
         >
           View all services
           <ArrowUpRight

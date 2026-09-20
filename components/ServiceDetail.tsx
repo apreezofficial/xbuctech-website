@@ -42,7 +42,7 @@ export function ServiceDetail({ service }: { service: Service }) {
 
           <ServiceLink
             href={`/contact?service=${service.slug}`}
-            className="group mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+            className="site-button group mt-9"
             style={{ backgroundColor: "var(--service-accent)" }}
           >
             Talk to an expert
@@ -156,7 +156,7 @@ export function ServiceDetail({ service }: { service: Service }) {
 
         <ServiceLink
           href={`/contact?service=${service.slug}`}
-          className="group mx-auto mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+          className="site-button group mx-auto mt-9"
           style={{ backgroundColor: "var(--service-accent)" }}
         >
           Schedule a consultation

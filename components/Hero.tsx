@@ -36,7 +36,7 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="#contact"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+              className="site-button group"
             >
               Get a free consultation
               <ArrowUpRight
@@ -46,7 +46,7 @@ export function Hero() {
             </a>
             <a
               href="#services"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition-transform hover:scale-[1.03]"
+              className="site-button site-button--dark group"
             >
               Explore our services
               <ArrowDown
