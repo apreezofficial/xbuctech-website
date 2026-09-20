@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root { --ink: #071326; --navy: #0b1c3a; --blue: #2b6cff; --acid: #b7f34a; --paper: #eef2e8; --muted: #9ba7ba; }
