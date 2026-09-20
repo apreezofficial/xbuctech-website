@@ -15,14 +15,17 @@ export function Footer() {
           </p>
         </div>
 
-        <nav className="flex items-center gap-6 text-sm font-medium text-neutral-400">
-          <a href="#about" className="transition-colors hover:text-white">
+        <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-neutral-400">
+          <a href="/about" className="transition-colors hover:text-white">
             About
           </a>
-          <a href="#services" className="transition-colors hover:text-white">
+          <a href="/services" className="transition-colors hover:text-white">
             Services
           </a>
-          <a href="#contact" className="transition-colors hover:text-white">
+          <a href="/faq" className="transition-colors hover:text-white">
+            FAQ
+          </a>
+          <a href="/contact" className="transition-colors hover:text-white">
             Contact
           </a>
         </nav>

@@ -1,33 +1,28 @@
-import { ArrowRight, ShieldCheck, ServerCog, ChartNoAxesCombined, Users } from "lucide-react";
+import { ArrowRight, ShieldCheck, ServerCog, ChartNoAxesCombined } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 export const metadata = {
   title: "About | X-BUC Tech",
   description:
-    "Learn how X-BUC Tech helps businesses secure operations, strengthen infrastructure, and scale with confidence.",
+    "Learn how X-BUC Tech helps organizations secure technology, manage IT environments, and build reliable infrastructure.",
 };
 
 const principles = [
   {
     icon: ShieldCheck,
-    title: "Security-first thinking",
-    text: "Every recommendation is built to reduce risk, improve resilience, and keep teams protected across the full technology environment.",
+    title: "Secure",
+    text: "Identify risks, strengthen security controls, and help protect systems, applications, networks, and data.",
   },
   {
     icon: ServerCog,
-    title: "Reliable operations",
-    text: "We help businesses stabilize systems, optimize infrastructure, and protect uptime without adding friction to day-to-day work.",
+    title: "Manage",
+    text: "Keep IT environments reliable, efficient, properly configured, and supported so businesses can focus on their operations.",
   },
   {
     icon: ChartNoAxesCombined,
-    title: "Business-focused execution",
-    text: "Technology decisions are aligned to performance, cost control, and the practical realities of running a modern operation.",
-  },
-  {
-    icon: Users,
-    title: "Human-centered support",
-    text: "We work closely with teams to understand their environment, priorities, and goals before recommending the right next move.",
+    title: "Innovate",
+    text: "Apply modern technology, automation, cloud solutions, and practical improvements to help organizations adapt and grow.",
   },
 ];
 
@@ -44,20 +39,52 @@ export default function AboutPage() {
                 About X-BUC Tech
               </p>
               <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Technology that keeps your business moving.
+                Secure. Manage. Innovate.
               </h1>
             </div>
 
             <div className="flex items-end">
               <p className="max-w-md text-base leading-7 text-neutral-300">
-                X-BUC Tech partners with businesses to secure their systems, manage their IT environments, and build resilient infrastructure that supports growth with confidence.
+                X-BUC TECH is an IT and cybersecurity solutions company focused
+                on helping businesses protect their technology, manage their IT
+                environments, and build reliable, secure infrastructure.
               </p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mx-auto max-w-3xl">
+            <p className="mb-5 text-sm leading-7 text-neutral-300 sm:text-base">
+              Today&apos;s businesses depend on technology for nearly every
+              aspect of their operations. At the same time, cyber threats,
+              system vulnerabilities, evolving technology, and compliance
+              requirements continue to create new challenges. X-BUC TECH helps
+              organizations address these challenges with practical,
+              security-focused solutions designed around their unique
+              technology environments and business needs.
+            </p>
+            <p className="text-sm leading-7 text-neutral-400 sm:text-base">
+              Our services span cybersecurity, managed IT and systems, network
+              infrastructure and visibility, cloud and infrastructure,
+              software testing and quality assurance, and compliance and
+              security support. We work to identify risks, improve visibility,
+              strengthen security controls, resolve technical challenges, and
+              help organizations maintain reliable technology operations.
+            </p>
+          </div>
+
+          <div className="mt-16 border-t border-white/10 pt-12">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+              Our approach
+            </p>
+            <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Effective technology management and cybersecurity should work
+              together.
+            </h2>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             {principles.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
@@ -77,27 +104,49 @@ export default function AboutPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
-                Why we exist
+                Why X-BUC Tech
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Better systems. Safer operations. Smarter growth.
+                Practical expertise for technology that matters.
               </h2>
             </div>
 
             <div className="space-y-6 text-neutral-300">
               <p className="text-base leading-7">
-                We help organizations simplify complexity. Whether the goal is stronger cybersecurity, better-managed IT, improved cloud performance, or stronger compliance posture, our work is designed to reduce friction and increase confidence.
+                We combine hands-on IT experience with cybersecurity knowledge
+                to provide solutions that are both technically sound and
+                business-focused. Our experience includes enterprise IT
+                environments, systems administration, network infrastructure,
+                cybersecurity operations, vulnerability management, cloud
+                technologies, software testing, and security frameworks.
               </p>
               <p className="text-base leading-7">
-                With a practical, business-first approach, X-BUC Tech supports teams that need dependable technology without unnecessary complexity, delays, or reactive firefighting.
+                Rather than taking a one-size-fits-all approach, we work with
+                each organization to understand its environment, identify
+                priorities, and develop practical solutions that support
+                security, reliability, performance, and long-term growth.
               </p>
-              <a
-                href="/contact"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-indigo-300 transition-colors hover:text-white"
-              >
-                Talk to an expert
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </a>
+              <h2 className="pt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                Let&apos;s Secure What Matters.
+              </h2>
+              <p className="text-base leading-7">
+                Whether you need help strengthening cybersecurity, managing IT
+                infrastructure, improving network visibility, securing cloud
+                environments, testing software, or preparing for compliance
+                requirements, X-BUC TECH is ready to help.
+              </p>
+              <div className="flex flex-wrap items-center gap-5 pt-2">
+                <a
+                  href="/contact"
+                  className="site-button site-button--dark group"
+                >
+                  Talk to an expert
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </a>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                  Secure • Manage • Innovate
+                </span>
+              </div>
             </div>
           </div>
         </section>
