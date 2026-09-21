@@ -1,8 +1,8 @@
-import { ClipboardSearch, LockKeyhole, Settings2, Sparkles } from "lucide-react";
+import { Clipboard, LockKeyhole, Settings2, Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const steps = [
-  { title: "Assess", text: "We understand your technology environment, challenges, and security requirements.", icon: ClipboardSearch },
+  { title: "Assess", text: "We understand your technology environment, challenges, and security requirements.", icon: Clipboard },
   { title: "Protect", text: "We implement practical security and technology solutions designed to reduce risk.", icon: LockKeyhole },
   { title: "Manage", text: "We help maintain your systems, infrastructure, and technology environment.", icon: Settings2 },
   { title: "Optimize", text: "We continuously identify opportunities to improve performance, reliability, and security.", icon: Sparkles },

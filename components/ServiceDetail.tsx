@@ -36,7 +36,14 @@ export function ServiceDetail({ service }: { service: Service }) {
             {service.title}
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-neutral-400 sm:text-lg">
+          <p
+            className="mt-4 max-w-lg text-xl font-medium leading-relaxed text-white sm:text-2xl"
+            style={{ color: "var(--service-accent)" }}
+          >
+            {service.tagline}
+          </p>
+
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-neutral-300 sm:text-lg">
             {service.description}
           </p>
 
@@ -45,7 +52,7 @@ export function ServiceDetail({ service }: { service: Service }) {
             className="site-button group mt-9"
             style={{ backgroundColor: "var(--service-accent)" }}
           >
-            Talk to an expert
+            {service.ctaLabel}
             <ArrowUpRight
               size={16}
               className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -159,7 +166,7 @@ export function ServiceDetail({ service }: { service: Service }) {
           className="site-button group mx-auto mt-9"
           style={{ backgroundColor: "var(--service-accent)" }}
         >
-          Schedule a consultation
+          {service.ctaLabel}
           <ArrowRight
             size={16}
             className="transition-transform group-hover:translate-x-0.5"
