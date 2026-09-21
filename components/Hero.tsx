@@ -24,13 +24,15 @@ export function Hero() {
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             Securing business.
             <br />
-            <em className="not-italic text-indigo-400">Powering</em> performance.
+            <em className="not-italic text-indigo-400">Powering performance.</em>
+            <br />
+            Enabling trust.
           </h1>
 
           <p className="mt-6 max-w-md text-base leading-relaxed text-neutral-400 sm:text-lg">
-            X-BUC TECH helps businesses protect their technology, manage
-            their IT environments, and build reliable, secure
-            infrastructure.
+            X-BUC TECH helps businesses protect their technology, reduce cyber
+            risk, and improve operational efficiency through enterprise-grade
+            IT and cybersecurity solutions.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

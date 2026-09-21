@@ -6,6 +6,10 @@ import { Hero } from "@/components/Hero";
 import { Approach } from "@/components/Approach";
 import { Services } from "@/components/Services";
 import { WhyUs } from "@/components/WhyUs";
+import { MissionVision } from "@/components/MissionVision";
+import { ServiceHighlights } from "@/components/ServiceHighlights";
+import { HowWeWork } from "@/components/HowWeWork";
+import { PricingSection } from "@/components/PricingSection";
 
 export default function Home() {
   return (
@@ -20,8 +24,12 @@ export default function Home() {
 
       <Approach />
       <WhyUs />
+      <MissionVision />
       <Services />
+      <ServiceHighlights />
+      <HowWeWork />
       <Capabilities />
+      <PricingSection />
       <ContactSection />
       <Footer />
     </main>

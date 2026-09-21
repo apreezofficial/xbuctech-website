@@ -30,7 +30,23 @@ export function Footer() {
           </a>
         </nav>
 
-        <span className="text-xs text-neutral-600">© 2026 X-BUC Tech</span>
+        <div className="flex items-center gap-4 text-xs font-medium text-neutral-500">
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Facebook</a>
+          <a href="https://x.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">X</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Instagram</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">LinkedIn</a>
+        </div>
+
+        <div className="flex flex-col items-center gap-2 text-xs text-neutral-600 sm:items-end">
+          <span>© 2026 X-BUC Tech</span>
+          <a href="mailto:info@xbuctech.com" className="transition-colors hover:text-white">
+            info@xbuctech.com
+          </a>
+          <a href="tel:+15125846924" className="transition-colors hover:text-white">
+            512-584-6924
+          </a>
+          <span>14205 N Mopac Expy #500, Austin, TX 78731</span>
+        </div>
       </div>
     </footer>
   );
