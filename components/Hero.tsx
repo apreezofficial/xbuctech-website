@@ -13,15 +13,15 @@ export function Hero() {
         <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-indigo-600/20 blur-[120px]" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* Copy */}
-        <div className="max-w-3xl">
-          <p className="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="mb-5 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
             <span className="h-px w-6 bg-indigo-400" />
             Secure. Manage. Innovate.
           </p>
 
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mx-auto max-w-6xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
             Securing business.
             <br />
             <em className="not-italic text-indigo-400">Powering performance.</em>
@@ -29,13 +29,13 @@ export function Hero() {
             Enabling trust.
           </h1>
 
-          <p className="mt-6 max-w-md text-base leading-relaxed text-neutral-400 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
             X-BUC TECH helps businesses protect their technology, reduce cyber
             risk, and improve operational efficiency through enterprise-grade
             IT and cybersecurity solutions.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-center">
             <a
               href="#contact"
               className="site-button group"
