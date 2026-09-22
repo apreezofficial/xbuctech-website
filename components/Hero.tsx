@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, ArrowDown } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -44,8 +45,8 @@ export function Hero() {
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
-            <a
-              href="#services"
+            <Link
+              href="/services"
               className="site-button site-button--dark group"
             >
               Explore our services
@@ -53,7 +54,7 @@ export function Hero() {
                 size={16}
                 className="transition-transform group-hover:translate-y-0.5"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
