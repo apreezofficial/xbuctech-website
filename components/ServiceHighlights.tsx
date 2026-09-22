@@ -65,7 +65,7 @@ export function ServiceHighlights() {
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
           {highlights.map((item, index) => (
-            <Reveal key={item.number} as="article" delay={index * 70} className="group flex flex-col bg-neutral-950 p-7 transition-colors hover:bg-[#0b1c3a]">
+            <Reveal key={item.number} as="article" delay={index * 70} className="group flex flex-col bg-neutral-950 p-7 transition-colors hover:bg-[#071A3D]">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold tracking-widest text-indigo-300">{item.number}</span>
                 <ArrowUpRight size={18} className="text-neutral-600 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300" />

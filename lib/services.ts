@@ -20,7 +20,7 @@ export const services: Service[] = [
     shortTitle: "Cybersecurity",
     description: "XBUC TECH provides practical cybersecurity solutions designed to help organizations identify threats, strengthen security controls, and protect their systems, applications, data, and users. We take a proactive, risk-based approach to help businesses improve their security posture and respond to evolving cybersecurity challenges.",
     detail: "Our cybersecurity services help organizations understand their exposure, prioritize action, and implement security controls that support a stronger security posture.",
-    accent: "#b7f34a",
+    accent: "#36c36a",
     capabilities: ["Vulnerability Management", "Security Control Implementation and Assessments", "Cybersecurity Awareness & Training", "Data Encryption & SSL/TLS", "Network Infrastructure & Visibility", "Risk Assessment & Remediation Guidance"],
     ctaLabel: "Strengthen your security",
   },

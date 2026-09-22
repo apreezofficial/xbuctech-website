@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function PricingSection() {
   return (
-    <section className="border-t border-white/10 bg-[#0b1c3a] px-4 py-24 sm:px-6 lg:px-8">
+    <section className="border-t border-white/10 bg-[#071A3D] px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20">
         <Reveal>
           <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
