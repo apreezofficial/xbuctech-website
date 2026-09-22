@@ -1,4 +1,5 @@
 import { services } from "@/lib/services";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ShieldCheck, Network, Sparkles, ArrowUpRight } from "lucide-react";
 
@@ -64,7 +65,7 @@ export function Services() {
           })}
         </div>
 
-        <a
+        <Link
           href="/services"
           className="site-button site-button--dark group mt-10"
         >
@@ -73,7 +74,7 @@ export function Services() {
             size={16}
             className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
-        </a>
+        </Link>
       </div>
     </section>
   );

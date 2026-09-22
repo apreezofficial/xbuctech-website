@@ -1,4 +1,5 @@
 import type { Service } from "@/lib/services";
+import Link from "next/link";
 import { ServiceLink } from "./ServiceLink";
 import { ArrowUpRight, ArrowRight, Sparkles } from "lucide-react";
 
@@ -10,9 +11,9 @@ export function ServiceDetail({ service }: { service: Service }) {
       {/* Breadcrumb */}
       <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
-          <a href="/services" className="transition-colors hover:text-white">
+          <Link href="/services" className="transition-colors hover:text-white">
             Services
-          </a>
+          </Link>
           <span className="text-neutral-700">/</span>
           <span className="text-neutral-300">{service.shortTitle}</span>
         </div>
