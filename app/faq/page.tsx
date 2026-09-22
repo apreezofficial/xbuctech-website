@@ -3,10 +3,13 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
-export const metadata = {
-  title: "FAQ | XBUC TECH",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IT and Cybersecurity FAQs",
   description:
-    "Answers to common questions about XBUC TECH services, cloud, compliance, software testing, and client engagement.",
+    "Find answers about XBUC TECH managed IT, cybersecurity, cloud services, compliance support, software testing, and client engagement.",
+  alternates: { canonical: "/faq" },
 };
 
 const faqs = [

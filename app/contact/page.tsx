@@ -3,10 +3,13 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
 
-export const metadata = {
-  title: "Contact | XBUC TECH",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact XBUC TECH",
   description:
-    "Talk with XBUC TECH about your IT, cybersecurity, cloud, compliance, or software testing needs.",
+    "Talk with XBUC TECH about managed IT, cybersecurity, cloud infrastructure, compliance, and software testing for your business.",
+  alternates: { canonical: "/contact" },
 };
 
 const serviceLabels: Record<string, string> = {
