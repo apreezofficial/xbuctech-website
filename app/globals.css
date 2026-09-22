@@ -12,6 +12,7 @@ a { color: inherit; text-decoration: none; }
 .text-indigo-500 { color: #1e6fff !important; }
 .text-indigo-600 { color: #1e6fff !important; }
 .bg-indigo-400 { background-color: #1e6fff !important; }
+.bg-indigo-500 { background-color: #1e6fff !important; }
 .bg-indigo-500\/10 { background-color: rgba(30, 111, 255, .1) !important; }
 .bg-indigo-500\/15 { background-color: rgba(30, 111, 255, .15) !important; }
 .bg-indigo-600\/20 { background-color: rgba(30, 111, 255, .2) !important; }
