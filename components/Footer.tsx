@@ -35,10 +35,10 @@ export function Footer() {
 
         <div className="flex flex-col items-start gap-3 text-sm font-medium text-neutral-400">
           <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500">Connect</p>
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Facebook</a>
-          <a href="https://x.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">X</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Instagram</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">LinkedIn</a>
+          <a href="https://www.facebook.com/profile.php?id=61594184391657" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Facebook</a>
+          <a href="https://x.com/xbuctech" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">X</a>
+          <a href="https://www.instagram.com/xbuctech/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">Instagram</a>
+          <a href="http://linkedin.com/company/x-buctech/" target="_blank" rel="noreferrer" className="transition-colors hover:text-white">LinkedIn</a>
         </div>
 
         <div className="flex flex-col items-start gap-3 text-sm text-neutral-400">
