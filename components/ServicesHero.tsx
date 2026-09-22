@@ -14,7 +14,7 @@ export function ServicesHero() {
         </div>
 
         <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-          Explore X-BUC
+          Explore XBUC TECH
           <br />
           <em className="not-italic text-indigo-400">Tech solutions.</em>
         </h1>

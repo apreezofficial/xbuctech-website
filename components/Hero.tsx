@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
-            X-BUC TECH helps businesses protect their technology, reduce cyber
+            XBUC TECH helps businesses protect their technology, reduce cyber
             risk, and improve operational efficiency through enterprise-grade
             IT and cybersecurity solutions.
           </p>

@@ -17,7 +17,7 @@ export function PricingSection() {
 
         <Reveal delay={120} className="flex flex-col items-start gap-7">
           <p className="max-w-xl text-base leading-7 text-neutral-300">
-            Every business has different technology, security, and operational requirements. X-BUC TECH provides customized solutions based on your environment, business objectives, and level of support needed. Whether you need ongoing managed IT support, cybersecurity services, infrastructure assistance, or a specialized technology project, we can tailor our services to your business requirements.
+            Every business has different technology, security, and operational requirements. XBUC TECH provides customized solutions based on your environment, business objectives, and level of support needed. Whether you need ongoing managed IT support, cybersecurity services, infrastructure assistance, or a specialized technology project, we can tailor our services to your business requirements.
           </p>
           <a href="/contact" className="site-button group">
             Talk to an IT &amp; cybersecurity consultant

@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 export const metadata = {
-  title: "FAQ | X-BUC Tech",
+  title: "FAQ | XBUC TECH",
   description:
     "Answers to common questions about XBUC TECH services, cloud, compliance, software testing, and client engagement.",
 };
@@ -17,20 +17,20 @@ const faqs = [
   {
     question: "Can I choose only the services my business needs?",
     answer:
-      "Yes. X-BUC TECH can provide individual services or a combination of solutions based on your organization's needs, objectives, and existing technology environment.",
+      "Yes. XBUC TECH can provide individual services or a combination of solutions based on your organization's needs, objectives, and existing technology environment.",
   },
   {
-    question: "Can X-BUC TECH help with compliance?",
+    question: "Can XBUC TECH help with compliance?",
     answer:
       "Yes. We help organizations strengthen security controls and support compliance initiatives aligned with applicable frameworks and standards, including HIPAA, PCI DSS, NIST, FISMA/NIST RMF, and ISO 27001.",
   },
   {
-    question: "How does X-BUC TECH get started with a new client?",
+    question: "How does XBUC TECH get started with a new client?",
     answer:
       "We begin by understanding your business, technology environment, challenges, and objectives. We then assess your requirements and recommend practical solutions designed to improve security, reliability, and operational efficiency.",
   },
   {
-    question: "Does X-BUC TECH provide cloud services?",
+    question: "Does XBUC TECH provide cloud services?",
     answer:
       "Yes. We provide cloud and infrastructure services that can include cloud administration, infrastructure management, cloud security, and backup and disaster recovery solutions.",
   },
@@ -57,7 +57,7 @@ export default function FAQPage() {
                 Clear answers for your next technology decision.
               </h1>
               <p className="max-w-md text-base leading-7 text-neutral-400">
-                Learn how X-BUC TECH works with organizations, builds practical
+                Learn how XBUC TECH works with organizations, builds practical
                 solutions, and supports security, infrastructure, cloud,
                 testing, and compliance needs.
               </p>

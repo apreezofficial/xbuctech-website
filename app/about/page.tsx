@@ -45,7 +45,7 @@ export default function AboutPage() {
 
             <div className="flex items-end">
               <p className="max-w-md text-base leading-7 text-neutral-300">
-                X-BUC TECH is an IT and cybersecurity solutions company focused
+                XBUC TECH is an IT and cybersecurity solutions company focused
                 on helping businesses protect their technology, manage their IT
                 environments, and build reliable, secure infrastructure.
               </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               Today&apos;s businesses depend on technology for nearly every
               aspect of their operations. At the same time, cyber threats,
               system vulnerabilities, evolving technology, and compliance
-              requirements continue to create new challenges. X-BUC TECH helps
+              requirements continue to create new challenges. XBUC TECH helps
               organizations address these challenges with practical,
               security-focused solutions designed around their unique
               technology environments and business needs.
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 Whether you need help strengthening cybersecurity, managing IT
                 infrastructure, improving network visibility, securing cloud
                 environments, testing software, or preparing for compliance
-                requirements, X-BUC TECH is ready to help.
+                requirements, XBUC TECH is ready to help.
               </p>
               <div className="flex flex-wrap items-center gap-5 pt-2">
                 <a
