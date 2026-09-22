@@ -24,10 +24,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-neutral-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="/" aria-label="X-BUC Tech home" className="flex items-center gap-3 text-white">
+        <a href="/" aria-label="XBUC TECH home" className="flex items-center gap-3 text-white">
           <img
             src="https://cdn.prod.website-files.com/6a7eeaf0a1bb653f6729ecbb/6a8042a1ee0d4bf4bd8931f7_image-removebg-preview-p-500.png"
-            alt="X-BUC Tech logo"
+            alt="XBUC TECH logo"
             className="h-8 w-auto object-contain md:h-9"
           />
         </a>

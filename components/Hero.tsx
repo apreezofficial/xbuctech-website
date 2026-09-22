@@ -22,11 +22,9 @@ export function Hero() {
           </p>
 
           <h1 className="mx-auto max-w-6xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
-            Securing business.
+            Technology built for
             <br />
-            <em className="not-italic text-indigo-400">Powering performance.</em>
-            <br />
-            Enabling trust.
+            <em className="not-italic text-indigo-400">secure future.</em>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">

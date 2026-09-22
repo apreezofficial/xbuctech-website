@@ -6,9 +6,9 @@ import { ServicesHero } from "@/components/ServicesHero";
 import { services } from "@/lib/services";
 
 export const metadata = {
-  title: "Services | X-BUC Tech",
+  title: "Services | XBUC TECH",
   description:
-    "Managed IT, cybersecurity, cloud infrastructure, compliance, and software testing from X-BUC Tech.",
+    "Managed IT, cybersecurity, cloud infrastructure, compliance, and software testing from XBUC TECH.",
 };
 
 export default function ServicesPage() {

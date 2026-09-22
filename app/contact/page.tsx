@@ -4,9 +4,9 @@ import { Header } from "@/components/Header";
 import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Contact | X-BUC Tech",
+  title: "Contact | XBUC TECH",
   description:
-    "Talk with X-BUC Tech about your IT, cybersecurity, cloud, compliance, or software testing needs.",
+    "Talk with XBUC TECH about your IT, cybersecurity, cloud, compliance, or software testing needs.",
 };
 
 const serviceLabels: Record<string, string> = {
@@ -98,7 +98,7 @@ export default async function ContactPage({
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/60">
               <iframe
-                title="X-BUC Tech office map"
+                title="XBUC TECH office map"
                 src="https://www.google.com/maps?q=14205%20N%20Mopac%20Expy%20%23500%2C%20Austin%2C%20TX%2078731&output=embed"
                 className="h-52 w-full border-0"
                 loading="lazy"

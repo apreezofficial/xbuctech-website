@@ -112,7 +112,7 @@ export function ServiceDetail({ service }: { service: Service }) {
             Each workstream below represents a practical area where we can help
             strengthen, manage, or validate your technology environment. Select
             the area closest to your current priority to start a focused
-            conversation with the X-BUC Tech team.
+            conversation with the XBUC TECH team.
           </p>
 
           <div className="mt-8 divide-y divide-white/10 border-t border-white/10">

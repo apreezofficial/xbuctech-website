@@ -3,9 +3,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 export const metadata = {
-  title: "About | X-BUC Tech",
+  title: "About | XBUC TECH",
   description:
-    "Learn how X-BUC Tech helps organizations secure technology, manage IT environments, and build reliable infrastructure.",
+    "Learn how XBUC TECH helps organizations secure technology, manage IT environments, and build reliable infrastructure.",
 };
 
 const principles = [
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div>
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
-                About X-BUC Tech
+                About XBUC TECH
               </p>
               <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Secure. Manage. Innovate.
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
-                Why X-BUC Tech
+                Why XBUC TECH
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Practical expertise for technology that matters.

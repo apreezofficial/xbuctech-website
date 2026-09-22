@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root { --ink: #071326; --navy: #0b1c3a; --blue: #2b6cff; --acid: #b7f34a; --paper: #eef2e8; --muted: #9ba7ba; }
+:root { --ink: #071326; --navy: #0b1c3a; --blue: #2b6cff; --acid: #b7f34a; --paper: #ffffff; --muted: #9ba7ba; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--ink); color: var(--paper); font-family: 'Space Grotesk', sans-serif; }

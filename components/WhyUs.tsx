@@ -7,7 +7,7 @@ export function WhyUs() {
         <Reveal>
           <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
             <span className="h-px w-6 bg-indigo-400" />
-            Why X-BUC Tech?
+            Why XBUC TECH?
           </p>
           <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             Built with

@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 export const metadata = {
   title: "FAQ | X-BUC Tech",
   description:
-    "Answers to common questions about X-BUC Tech services, cloud, compliance, software testing, and client engagement.",
+    "Answers to common questions about XBUC TECH services, cloud, compliance, software testing, and client engagement.",
 };
 
 const faqs = [

@@ -9,7 +9,7 @@ export function generateStaticParams() { return services.map((service) => ({ slu
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = getService(slug);
-  return { title: service ? `${service.shortTitle} | X-BUC Tech` : "Service | X-BUC Tech" };
+  return { title: service ? `${service.shortTitle} | XBUC TECH` : "Service | XBUC TECH" };
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {

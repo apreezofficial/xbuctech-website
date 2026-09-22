@@ -18,7 +18,7 @@ export function HowWeWork() {
             How we work
           </p>
           <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-            How X-BUC TECH
+            How XBUC TECH
             <br />
             <em className="not-italic text-indigo-400">secures your business.</em>
           </h2>

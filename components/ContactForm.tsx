@@ -60,7 +60,7 @@ export function ContactForm({ selectedService, focus }: ContactFormProps) {
       <input
         type="hidden"
         name="_subject"
-        value="New X-BUC Tech consultation request"
+        value="New XBUC TECH consultation request"
       />
       {focus ? <input type="hidden" name="focus" value={focus} /> : null}
 

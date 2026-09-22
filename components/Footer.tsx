@@ -3,10 +3,10 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-neutral-950">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-12 text-center sm:flex-row sm:justify-between sm:px-6 sm:text-left lg:px-8">
         <div className="flex flex-col items-center gap-3 sm:items-start">
-          <a href="#top" aria-label="X-BUC Tech home" className="flex items-center gap-2 text-white">
+          <a href="#top" aria-label="XBUC TECH home" className="flex items-center gap-2 text-white">
             <img
               src="https://cdn.prod.website-files.com/6a7eeaf0a1bb653f6729ecbb/6a8042a1ee0d4bf4bd8931f7_image-removebg-preview-p-500.png"
-              alt="X-BUC Tech logo"
+              alt="XBUC TECH logo"
               className="h-9 w-auto object-contain"
             />
           </a>
@@ -38,7 +38,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center gap-2 text-xs text-neutral-600 sm:items-end">
-          <span>© 2026 X-BUC Tech</span>
+          <span>© 2026 XBUC TECH</span>
           <a href="mailto:info@xbuctech.com" className="transition-colors hover:text-white">
             info@xbuctech.com
           </a>
