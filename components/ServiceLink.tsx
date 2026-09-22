@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type ServiceLinkProps = {
   href: string;
   children: React.ReactNode;
@@ -7,8 +9,8 @@ type ServiceLinkProps = {
 
 export function ServiceLink({ href, children, className = "", style }: ServiceLinkProps) {
   return (
-    <a className={`inline-flex cursor-pointer items-center gap-2 ${className}`} href={href} style={style}>
+    <Link className={`inline-flex cursor-pointer items-center gap-2 ${className}`} href={href} style={style}>
       {children}
-    </a>
+    </Link>
   );
 }

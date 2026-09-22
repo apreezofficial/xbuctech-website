@@ -37,7 +37,7 @@ export function Header() {
           {navLinks.map((link) => {
             const active = isCurrentPath(link.href);
             return (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className={`relative text-sm font-medium transition-colors ${
@@ -47,19 +47,19 @@ export function Header() {
               >
                 {link.label}
                 {active && <span className="absolute -bottom-2 left-0 h-px w-full bg-indigo-500" />}
-              </a>
+              </Link>
             );
           })}
         </nav>
 
         <div className="hidden items-center md:flex">
-          <a
+          <Link
             href="/contact"
             className="site-button group"
           >
             Book a call
             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </Link>
         </div>
 
         <button
@@ -84,7 +84,7 @@ export function Header() {
           {navLinks.map((link) => {
             const active = isCurrentPath(link.href);
             return (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
@@ -93,17 +93,17 @@ export function Header() {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             );
           })}
-          <a
+          <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
             className="site-button group mt-2"
           >
             Book a call
             <ArrowUpRight size={16} />
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export function ContactSection() {
   return (
@@ -25,7 +26,7 @@ export function ContactSection() {
             secure, reliable technology foundation to get there.
           </p>
 
-          <a
+          <Link
             href="/contact"
             className="site-button site-button--dark group"
           >
@@ -34,7 +35,7 @@ export function ContactSection() {
               size={16}
               className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
-          </a>
+          </Link>
 
           <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-neutral-400">
             <a

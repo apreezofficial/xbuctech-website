@@ -1,4 +1,5 @@
 import { ArrowRight, ShieldCheck, ServerCog, ChartNoAxesCombined } from "lucide-react";
+import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
@@ -136,13 +137,13 @@ export default function AboutPage() {
                 requirements, XBUC TECH is ready to help.
               </p>
               <div className="flex flex-wrap items-center gap-5 pt-2">
-                <a
+                <Link
                   href="/contact"
                   className="site-button site-button--dark group"
                 >
                   Talk to an expert
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
                   Secure • Manage • Innovate
                 </span>

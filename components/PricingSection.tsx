@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 export function PricingSection() {
@@ -19,10 +20,10 @@ export function PricingSection() {
           <p className="max-w-xl text-base leading-7 text-neutral-300">
             Every business has different technology, security, and operational requirements. XBUC TECH provides customized solutions based on your environment, business objectives, and level of support needed. Whether you need ongoing managed IT support, cybersecurity services, infrastructure assistance, or a specialized technology project, we can tailor our services to your business requirements.
           </p>
-          <a href="/contact" className="site-button group">
+          <Link href="/contact" className="site-button group">
             Talk to an IT &amp; cybersecurity consultant
             <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

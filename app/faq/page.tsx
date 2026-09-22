@@ -1,4 +1,5 @@
 import { ArrowUpRight, Plus } from "lucide-react";
+import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
@@ -93,13 +94,13 @@ export default function FAQPage() {
               Have a question about your specific environment? We can start with
               your priorities and recommend the right next step.
             </p>
-            <a href="/contact" className="site-button site-button--dark group">
+            <Link href="/contact" className="site-button site-button--dark group">
               Talk to an expert
               <ArrowUpRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
-            </a>
+            </Link>
           </div>
         </section>
       </main>

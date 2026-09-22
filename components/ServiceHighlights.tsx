@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 const highlights = [
@@ -73,10 +74,10 @@ export function ServiceHighlights() {
               <h3 className="mt-10 text-xl font-semibold text-white">{item.title}</h3>
               <p className="mt-3 text-sm font-medium leading-6 text-indigo-200">{item.headline}</p>
               <p className="mt-4 flex-1 text-base leading-7 text-neutral-400">{item.text}</p>
-              <a href={item.href} className="mt-7 inline-flex w-fit cursor-pointer items-center gap-2 text-sm font-semibold text-indigo-300 hover:text-white">
+              <Link href={item.href} className="mt-7 inline-flex w-fit cursor-pointer items-center gap-2 text-sm font-semibold text-indigo-300 hover:text-white">
                 Explore service
                 <ArrowUpRight size={16} />
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>
