@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   authors: [{ name: "XBUC TECH" }],
   creator: "XBUC TECH",
   publisher: "XBUC TECH",
+  verification: {
+    google: "z_MkeforSz_85xlRgmmXIV42sZXk_z6LprvbZ5AZKWk",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

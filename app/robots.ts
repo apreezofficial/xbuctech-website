@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/mail", "/api/"],
     },
     sitemap: "https://xbuc.pxxl.dev/sitemap.xml",
   };
