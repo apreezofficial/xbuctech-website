@@ -53,7 +53,8 @@ export default function AboutPage() {
         <section className="border-b border-white/10">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div>
-              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+              <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+              <span className="h-px w-6 bg-indigo-400" />
                 About X-BUC TECH
               </p>
               <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -75,7 +76,8 @@ export default function AboutPage() {
         <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+              <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+              <span className="h-px w-6 bg-indigo-400" />
                 Who we work with
               </p>
               <h2 className="max-w-md text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -99,7 +101,8 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-20 border-t border-white/10 pt-12">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+            <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+              <span className="h-px w-6 bg-indigo-400" />
               Our approach
             </p>
             <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -152,7 +155,8 @@ export default function AboutPage() {
         <section className="border-t border-white/10 bg-neutral-900/70">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
+              <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+              <span className="h-px w-6 bg-indigo-400" />
                 Our experience
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">

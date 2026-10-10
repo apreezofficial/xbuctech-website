@@ -19,8 +19,9 @@ export default function Home() {
       <section className="border-b border-white/10 bg-neutral-950" id="about">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-400">
-              / About us
+            <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">
+              <span className="h-px w-6 bg-indigo-400" />
+              About us
             </p>
             <h2 className="max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               IT and security,<br />
