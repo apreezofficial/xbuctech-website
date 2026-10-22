@@ -1,11 +1,12 @@
 "use client";
 
-import { Mail, RefreshCw, Search } from "lucide-react";
+import { Mail, RefreshCw, Reply, Search } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 type Folder = "inbox" | "sent";
 type Summary = { id: string; from?: string; to?: string[]; subject?: string; created_at: string; last_event?: string };
 type Detail = Summary & { text?: string; html?: string };
+export type ReplyDraft = { to: string; subject: string; message: string };
 
 function formatDate(value: string) {
   const date = new Date(value);
@@ -14,7 +15,7 @@ function formatDate(value: string) {
     : date.toLocaleDateString([], { month: "short", day: "numeric" });
 }
 
-export default function Mailbox({ accessKey, folder }: { accessKey: string; folder: Folder }) {
+export default function Mailbox({ accessKey, folder, onReply }: { accessKey: string; folder: Folder; onReply?: (draft: ReplyDraft) => void }) {
   const [messages, setMessages] = useState<Summary[]>([]);
   const [selected, setSelected] = useState<Detail | null>(null);
   const [query, setQuery] = useState("");
@@ -91,6 +92,7 @@ export default function Mailbox({ accessKey, folder }: { accessKey: string; fold
               <div><dt className="inline font-semibold">To: </dt><dd className="inline">{selected.to?.join(", ")}</dd></div>
               <div><dt className="inline font-semibold">Date: </dt><dd className="inline">{new Date(selected.created_at).toLocaleString()}</dd></div>
             </dl>
+            {folder === "inbox" && selected.from && onReply ? <button type="button" onClick={() => onReply({ to: selected.from!, subject: selected.subject?.toLowerCase().startsWith("re:") ? selected.subject : `Re: ${selected.subject || "(no subject)"}`, message: `\n\n--- Original message ---\nFrom: ${selected.from}\nDate: ${new Date(selected.created_at).toLocaleString()}\n\n${selected.text || ""}` })} className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#071A3D] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#0d2a5e]"><Reply size={15} /> Reply</button> : null}
             {selected.html ? (
               <iframe title="Message body" sandbox="" srcDoc={selected.html} className="mt-4 h-[480px] w-full rounded-lg border border-[#eef2f6]" />
             ) : (

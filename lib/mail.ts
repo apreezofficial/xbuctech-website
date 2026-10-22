@@ -14,6 +14,8 @@ const defaultSenders: Sender[] = [
   { email: "noreply@xbuctech.com", label: "No Reply" },
 ];
 
+const defaultNotificationRecipients = ["apreezofficial@gmail.com", "xbuctech@gmail.com"];
+
 // MAIL_SENDERS="Hello:hello@xbuctech.com,Support:support@xbuctech.com" overrides the defaults.
 export function getSenders(): Sender[] {
   const raw = process.env.MAIL_SENDERS;
@@ -39,6 +41,13 @@ export function parseRecipients(value: unknown): string[] | null {
   const recipients = [...new Set(list.map((item) => String(item).trim().toLowerCase()).filter(Boolean))];
   if (recipients.length > 50 || recipients.some((email) => email.length > 320 || !emailPattern.test(email))) return null;
   return recipients;
+}
+
+// MAIL_NOTIFICATION_TO may override the default inbound-mail notification list.
+export function getNotificationRecipients(): string[] {
+  const configured = process.env.MAIL_NOTIFICATION_TO;
+  const recipients = parseRecipients(configured || defaultNotificationRecipients);
+  return recipients?.length ? recipients : defaultNotificationRecipients;
 }
 
 export async function resend(path: string, init?: RequestInit) {

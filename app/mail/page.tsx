@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Inbox, LockKeyhole, Menu, PenLine, Send, ShieldCheck, Webhook, X } from "lucide-react";
 import { FormEvent, useState } from "react";
-import Composer, { type Sender } from "./Composer";
+import Composer, { type ReplyDraft, type Sender } from "./Composer";
 import Mailbox from "./Mailbox";
 import WebhookPanel from "./WebhookPanel";
 
@@ -25,6 +25,7 @@ export default function MailPage() {
   const [authError, setAuthError] = useState("");
   const [view, setView] = useState<MailView>("compose");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [replyDraft, setReplyDraft] = useState<ReplyDraft | null>(null);
 
   async function unlock(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -83,8 +84,8 @@ export default function MailPage() {
           <div className="mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#1E6FFF]">{selectedView.eyebrow}</p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-[#071A3D]">{selectedView.label}</h1>
-            {view === "compose" ? <Composer accessKey={accessKey} senders={config.senders} /> : null}
-            {view === "inbox" || view === "sent" ? <Mailbox key={view} accessKey={accessKey} folder={view} /> : null}
+            {view === "compose" ? <Composer accessKey={accessKey} senders={config.senders} reply={replyDraft} /> : null}
+            {view === "inbox" || view === "sent" ? <Mailbox key={view} accessKey={accessKey} folder={view} onReply={(draft) => { setReplyDraft(draft); setView("compose"); }} /> : null}
             {view === "webhook" ? <WebhookPanel accessKey={accessKey} configured={config.webhookConfigured} forwardTo={config.forwardTo} /> : null}
           </div>
         </section>

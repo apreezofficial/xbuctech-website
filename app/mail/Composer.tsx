@@ -1,12 +1,18 @@
 "use client";
 
-import { ChevronDown, Clock3, LayoutTemplate, Send, Users, X } from "lucide-react";
-import { FormEvent, KeyboardEvent, useMemo, useState } from "react";
+import { ChevronDown, Clock3, LayoutTemplate, Paperclip, Send, Users, X } from "lucide-react";
+import { FormEvent, KeyboardEvent, useEffect, useMemo, useState } from "react";
 
 export type Sender = { email: string; label: string };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const recentKey = "x-buc-mail-recent";
+const maxFiles = 5;
+const maxFileBytes = 10 * 1024 * 1024;
+const maxTotalBytes = 25 * 1024 * 1024;
+
+export type ReplyDraft = { to: string; subject: string; message: string };
+type Attachment = { file: File; content: string };
 
 const templates = [
   { id: "blank", label: "Blank message", subject: "", message: "" },
@@ -136,7 +142,7 @@ function Select({ label, icon, value, onChange, children }: { label: string; ico
   );
 }
 
-export default function Composer({ accessKey, senders }: { accessKey: string; senders: Sender[] }) {
+export default function Composer({ accessKey, senders, reply }: { accessKey: string; senders: Sender[]; reply?: ReplyDraft | null }) {
   const [from, setFrom] = useState(senders[0]?.email ?? "");
   const [to, setTo] = useState<string[]>([]);
   const [cc, setCc] = useState<string[]>([]);
@@ -145,9 +151,18 @@ export default function Composer({ accessKey, senders }: { accessKey: string; se
   const [template, setTemplate] = useState("blank");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [attachments, setAttachments] = useState<Attachment[]>([]);
   const [recent, setRecent] = useState<string[]>(loadRecent);
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<{ tone: "ok" | "error"; text: string } | null>(null);
+
+  useEffect(() => {
+    if (!reply) return;
+    setTo([reply.to]);
+    setSubject(reply.subject);
+    setMessage(reply.message);
+    setTemplate("blank");
+  }, [reply]);
 
   const suggestions = useMemo(() => [...new Set([...recent, ...senders.map((sender) => sender.email)])], [recent, senders]);
   const quickPicks = suggestions.filter((email) => !to.includes(email)).slice(0, 6);
@@ -158,6 +173,24 @@ export default function Composer({ accessKey, senders }: { accessKey: string; se
     if (!picked) return;
     setSubject(picked.subject);
     setMessage(picked.message);
+  }
+
+  function addFiles(event: React.ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(event.target.files || []);
+    event.target.value = "";
+    if (!files.length) return;
+    const currentBytes = attachments.reduce((total, item) => total + item.file.size, 0);
+    if (attachments.length + files.length > maxFiles || currentBytes + files.reduce((total, file) => total + file.size, 0) > maxTotalBytes || files.some((file) => file.size > maxFileBytes)) {
+      setStatus({ tone: "error", text: "Choose up to 5 files, 10 MB each, and 25 MB total." });
+      return;
+    }
+    Promise.all(files.map(async (file) => {
+      const buffer = await file.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      let binary = "";
+      for (let index = 0; index < bytes.length; index += 1) binary += String.fromCharCode(bytes[index]);
+      return { file, content: btoa(binary) };
+    })).then((next) => setAttachments((current) => [...current, ...next])).catch(() => setStatus({ tone: "error", text: "Unable to read one of the selected files." }));
   }
 
   async function send(event: FormEvent<HTMLFormElement>) {
@@ -172,13 +205,13 @@ export default function Composer({ accessKey, senders }: { accessKey: string; se
       const response = await fetch("/api/mail/send", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ accessKey, from, to, cc, bcc, subject, message }),
+        body: JSON.stringify({ accessKey, from, to, cc, bcc, subject, message, attachments: attachments.map(({ file, content }) => ({ filename: file.name, content, contentType: file.type || undefined })) }),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Resend could not deliver the email.");
       setRecent(saveRecent([...to, ...cc, ...bcc]));
       setStatus({ tone: "ok", text: `Sent to ${to.length + cc.length + bcc.length} recipient${to.length + cc.length + bcc.length === 1 ? "" : "s"}.` });
-      setTo([]); setCc([]); setBcc([]); setSubject(""); setMessage(""); setTemplate("blank");
+      setTo([]); setCc([]); setBcc([]); setSubject(""); setMessage(""); setAttachments([]); setTemplate("blank");
     } catch (error) {
       setStatus({ tone: "error", text: error instanceof Error ? error.message : "Unable to send the message." });
     } finally {
@@ -227,6 +260,17 @@ export default function Composer({ accessKey, senders }: { accessKey: string; se
           <span className="flex justify-between">Message<span className="text-xs font-normal text-[#a3aebd]">{message.length.toLocaleString()} / 10,000</span></span>
           <textarea required value={message} onChange={(event) => setMessage(event.target.value)} rows={10} maxLength={10000} className="resize-y rounded-lg border border-[#dfe5ed] px-4 py-3 text-[#071A3D] outline-none focus:border-[#1E6FFF]" />
         </label>
+        <div className="grid gap-2 text-sm font-medium text-[#52627a]">
+          <span>Attachments</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-[#dfe5ed] px-3 py-2 text-xs font-semibold text-[#52627a] hover:border-[#1E6FFF] hover:text-[#1E6FFF]">
+              <Paperclip size={14} /> Add files
+              <input type="file" multiple onChange={addFiles} className="sr-only" />
+            </label>
+            <span className="text-xs font-normal text-[#8a96a8]">Up to 5 files, 10 MB each</span>
+          </div>
+          {attachments.length ? <ul className="grid gap-2 sm:grid-cols-2">{attachments.map(({ file }, index) => <li key={`${file.name}-${file.lastModified}`} className="flex items-center justify-between gap-2 rounded-lg bg-[#f5f8fc] px-3 py-2 text-xs text-[#52627a]"><span className="min-w-0 truncate">{file.name}</span><button type="button" aria-label={`Remove ${file.name}`} onClick={() => setAttachments((current) => current.filter((_, itemIndex) => itemIndex !== index))} className="rounded-full p-1 hover:bg-[#eaf1ff] hover:text-[#1E6FFF]"><X size={13} /></button></li>)}</ul> : null}
+        </div>
         <div className="flex flex-wrap items-center gap-4">
           <button disabled={isSending} type="submit" className="inline-flex items-center gap-2 rounded-lg bg-[#36C36A] px-5 py-3 text-sm font-bold text-[#071A3D] hover:bg-[#4bd77d] disabled:opacity-60">{isSending ? "Sending..." : "Send Message"}<Send size={16} /></button>
           {status ? <p aria-live="polite" className={`text-sm ${status.tone === "ok" ? "text-[#2a9d55]" : "text-red-500"}`}>{status.text}</p> : null}
